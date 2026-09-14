@@ -1,4 +1,4 @@
-//usado para +de um resultado, ao inves do so if e else
+//A diferenca entre o if e else e que esse compara a mesma variável com vários valores
 
 var place = 'first';
 
