@@ -291,6 +291,15 @@
 
         .blog-card h1 {
             font-size: 30px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e2e2;
+        }
+
+        .blog-card h1:first-of-type {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
         }
 
         .blog-card #chapter-one {
@@ -306,39 +315,60 @@
         }
 
         .blog-card .nav-links {
-            margin: 6px 0;
+            margin: 10px 0;
+            display: flex;
+            gap: 10px;
         }
 
         .blog-card .nav-links a,
         .blog-card .nav-links span {
-            margin-right: 14px;
             font-weight: 700;
+            font-size: 13px;
             color: var(--green);
+            background: var(--offwhite);
+            padding: 6px 14px;
+            border-radius: 20px;
+        }
+
+        .blog-card .nav-links a {
+            transition: background 0.15s ease, color 0.15s ease;
+        }
+
+        .blog-card .nav-links a:hover {
+            background: var(--yellow);
+            color: var(--dark);
         }
 
         .blog-card .test-blue {
-            color: #2f6fed;
+            display: block;
+            color: var(--green);
             font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+            margin: 10px 0;
         }
 
         .blog-card .test-purple {
             display: inline-block;
-            background: #7d3ac1;
-            color: var(--white);
-            padding: 2px 10px;
-            border-radius: 6px;
-            font-weight: 700;
+            background: var(--yellow);
+            color: var(--dark);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 14px;
         }
 
         .blog-card .mini-post {
-            margin-top: 22px;
-            padding-top: 18px;
-            border-top: 1px solid #e2e2e2;
+            margin-top: 26px;
+            padding: 20px 22px;
+            background: var(--offwhite);
+            border-radius: 12px;
         }
 
         .blog-card .mini-post h2 {
             font-family: 'Markazi Text', serif;
-            font-size: 24px;
+            font-size: 26px;
             color: var(--green);
         }
 
