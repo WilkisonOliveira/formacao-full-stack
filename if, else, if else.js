@@ -1,3 +1,5 @@
+//dedicado a verificar varias condições individualmente
+
 var place = 'first';
 
 if (place == 'first') {
