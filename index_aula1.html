@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Little Lemon | Mediterranean Restaurant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;700&family=Karla:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --green: #495e57;
+            --yellow: #f4ce14;
+            --orange: #ee9972;
+            --peach: #fbdabb;
+            --offwhite: #edefee;
+            --dark: #333333;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Karla', Arial, sans-serif;
+            color: var(--dark);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Markazi Text', Georgia, serif;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--yellow);
+            color: var(--dark);
+            font-weight: 800;
+            padding: 12px 26px;
+            border-radius: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-title {
+            font-size: 40px;
+            color: var(--green);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        section {
+            padding: 70px 8vw;
+        }
+
+        /* ===== Header ===== */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 8vw;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .logo {
+            font-family: 'Markazi Text', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--green);
+        }
+
+        .logo span {
+            color: var(--yellow);
+            background: var(--green);
+            padding: 0 4px;
+            border-radius: 4px;
+        }
+
+        .site-header nav {
+            display: flex;
+            gap: 26px;
+            flex-wrap: wrap;
+        }
+
+        .site-header nav a {
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--dark);
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.15s ease, color 0.15s ease;
+        }
+
+        .site-header nav a:hover {
+            color: var(--green);
+            border-color: var(--yellow);
+        }
+
+        /* ===== Hero ===== */
+        .hero {
+            background: var(--green);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1 1 380px;
+        }
+
+        .hero .eyebrow {
+            color: var(--yellow);
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 4px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            line-height: 1.1;
+        }
+
+        .hero .subtitle {
+            font-size: 26px;
+            font-family: 'Markazi Text', serif;
+            margin: 4px 0 18px;
+        }
+
+        .hero-desc {
+            font-size: 16px;
+            max-width: 480px;
+            margin-bottom: 26px;
+            color: var(--offwhite);
+        }
+
+        .hero-image {
+            flex: 1 1 300px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            border-radius: 16px;
+            width: 100%;
+            max-width: 380px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        /* ===== Menu ===== */
+        .menu {
+            background: var(--offwhite);
+        }
+
+        .menu-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .menu-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .menu-card img {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .menu-card-body {
+            padding: 20px 22px 24px;
+        }
+
+        .menu-card-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+
+        .menu-card-head h3 {
+            font-size: 26px;
+            color: var(--dark);
+        }
+
+        .menu-card .price {
+            color: var(--green);
+            font-weight: 800;
+            font-size: 18px;
+            font-family: 'Karla', sans-serif;
+        }
+
+        .menu-card-body p {
+            margin: 0;
+            color: #555;
+            font-size: 15px;
+        }
+
+        /* ===== About ===== */
+        .about-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+        }
+
+        .about-card {
+            background: var(--peach);
+            border-radius: 14px;
+            padding: 26px 24px;
+        }
+
+        .about-card h3 {
+            font-size: 24px;
+            color: var(--green);
+            margin-bottom: 10px;
+        }
+
+        .about-card p {
+            font-size: 15px;
+            color: var(--dark);
+            margin: 0;
+        }
+
+        /* ===== Blog ===== */
+        .blog {
+            background: var(--offwhite);
+        }
+
+        .blog-card {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 16px;
+            padding: 30px 34px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .blog-card h1 {
+            font-size: 30px;
+        }
+
+        .blog-card #chapter-one {
+            color: var(--green);
+        }
+
+        .blog-card h1.chapter {
+            color: var(--orange);
+        }
+
+        .blog-card p {
+            color: var(--dark);
+        }
+
+        .blog-card .nav-links {
+            margin: 6px 0;
+        }
+
+        .blog-card .nav-links a,
+        .blog-card .nav-links span {
+            margin-right: 14px;
+            font-weight: 700;
+            color: var(--green);
+        }
+
+        .blog-card .test-blue {
+            color: #2f6fed;
+            font-weight: 700;
+        }
+
+        .blog-card .test-purple {
+            display: inline-block;
+            background: #7d3ac1;
+            color: var(--white);
+            padding: 2px 10px;
+            border-radius: 6px;
+            font-weight: 700;
+        }
+
+        .blog-card .mini-post {
+            margin-top: 22px;
+            padding-top: 18px;
+            border-top: 1px solid #e2e2e2;
+        }
+
+        .blog-card .mini-post h2 {
+            font-family: 'Markazi Text', serif;
+            font-size: 24px;
+            color: var(--green);
+        }
+
+        /* ===== Text Sample ===== */
+        .textsample {
+            background: var(--white);
+        }
+
+        .textsample-card {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--peach);
+            border-radius: 16px;
+            padding: 30px 34px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .textsample-card span {
+            color: var(--dark);
+        }
+
+        .textsample-card #middle {
+            padding: 4px 0;
+        }
+
+        /* ===== Location ===== */
+        .location {
+            background: var(--offwhite);
+        }
+
+        .location-card {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .location-card h3 {
+            font-size: 26px;
+            color: var(--green);
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            section {
+                padding: 50px 6vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="#hero" class="logo">Little <span>Lemon</span></a>
+            <nav>
+                <a href="#hero">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About Us</a>
+                <a href="#blog">Blog</a>
+                <a href="#textsample">Text Sample</a>
+                <a href="#location">Location</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-text">
+            <p class="eyebrow">Chicago</p>
+            <h1>Little Lemon</h1>
+            <p class="subtitle">A family-owned Mediterranean restaurant</p>
+            <p class="hero-desc">
+                We combine traditional Greek recipes with a modern creative twist,
+                serving simple, fresh, and flavorful dishes in a welcoming atmosphere.
+            </p>
+            <a href="#menu" class="btn">View Menu</a>
+        </div>
+        <div class="hero-image">
+            <img src="falafel.jpeg" alt="House special falafel" />
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <h2 class="section-title">House Specialties</h2>
+        <div class="menu-grid">
+            <article class="menu-card">
+                <img src="falafel.jpeg" alt="Falafel" />
+                <div class="menu-card-body">
+                    <div class="menu-card-head">
+                        <h3>Falafel</h3>
+                        <span class="price">$12.00</span>
+                    </div>
+                    <p>Chickpeas, fresh herbs, and select spices, fried until golden.</p>
+                </div>
+            </article>
+            <article class="menu-card">
+                <img src="PastaSalad.jpeg" alt="Pasta salad" />
+                <div class="menu-card-body">
+                    <div class="menu-card-head">
+                        <h3>Pasta Salad</h3>
+                        <span class="price">$10.00</span>
+                    </div>
+                    <p>Lettuce, seasonal vegetables, and handcrafted mozzarella.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2 class="section-title">Our Story</h2>
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>How It All Started</h3>
+                <p>Little Lemon began as the dream of a family passionate about Mediterranean
+                    cooking, bringing recipes passed down through generations to the heart of Chicago.</p>
+            </div>
+            <div class="about-card">
+                <h3>Our Philosophy</h3>
+                <p>We believe in fresh ingredients, local suppliers, and dishes that tell a
+                    story — simplicity and authentic flavor in every plate we serve.</p>
+            </div>
+            <div class="about-card">
+                <h3>Little Lemon Today</h3>
+                <p>Today we're a gathering place for the neighborhood, blending Mediterranean
+                    tradition and hospitality in a setting made for the whole family.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog">
+        <h2 class="section-title">Blog</h2>
+        <div class="blog-card">
+            <h1 id="chapter-one">Chapter One: The Beginning</h1>
+            <p>Little Lemon opened its doors in 1995, when the Rossi family decided to bring
+                the flavors of their Mediterranean childhood to the streets of Chicago.</p>
+
+            <h1 class="chapter">Chapter Two: Growing Roots</h1>
+            <p class="nav-links">
+                <a href="#chapter-one">Go Back</a>
+                <span>Go Forward</span>
+            </p>
+            <p>Word spread quickly through the neighborhood, and what started as a small
+                family kitchen soon became a gathering spot for regulars and newcomers alike.</p>
+
+            <h1 class="chapter">Chapter Three: A Local Favorite</h1>
+            <p>Decades later, Little Lemon remains true to its roots: fresh ingredients,
+                honest recipes, and a warm welcome for every guest who walks through the door.</p>
+
+            <p class="test-blue">Chef's Pick of the Week</p>
+            <p class="test-blue">New Seasonal Menu Now Available</p>
+            <p><span class="test-purple">Limited Time Offer</span></p>
+
+            <div class="mini-post">
+                <h2>Latest News</h2>
+                <h3>Today's Weather</h3>
+                <p>The weather will be sunny</p>
+                <p>Subscribe for more news</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="textsample" class="textsample">
+        <h2 class="section-title">Text Sample</h2>
+        <div class="textsample-card">
+            <span>Lorem ipsum dolor sit amet.</span>
+            <span id="middle"><em>Etiam et odio turpis.</em></span>
+            <span>Nulla facilisi.</span>
+        </div>
+    </section>
+
+    <section id="location" class="location">
+        <h2 class="section-title">Our Location</h2>
+        <div class="location-card">
+            <p>123 Home Road, Main District, Capital City</p>
+        </div>
+    </section>
+</body>
+
+</html>
