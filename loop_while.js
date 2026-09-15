@@ -7,3 +7,11 @@ while (counter > 0) {
     counter = counter - 1;
 }
 console.log('Happy Birthday!!')
+
+//-----------------------------//
+
+var year = 2018;
+while (year < 2023) {
+    console.log(year);
+    year++;
+};
