@@ -23,3 +23,4 @@ console.log('Go')
 //  console.log('Happy New Year!!!');
 //}
 //}, 1000); // 1000 = cada segundo aqui no caso e 1 mas posso mudar para 2000, 3000 etc
+
