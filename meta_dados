@@ -1,0 +1,83 @@
+Tags HTML
+<META>
+No início do curso, você aprendeu sobre as meta tags e como pode aproveitá-las para transmitir informações aos
+mecanismos de busca, a fim de categorizar melhor suas páginas. Recomendamos que você mantenha esta folha de referência à
+mão ao criar suas aplicações web. A estrutura de uma meta tag é a seguinte.
+
+
+Nome
+
+O nome da propriedade pode ser qualquer coisa que você quiser, embora os navegadores geralmente esperem um valor que
+possam entender e sobre o qual possam agir. Um exemplo seria
+<meta name="author" content="name"> para indicar o autor da página.
+
+Conteúdo
+
+O campo de conteúdo especifica o valor da propriedade. Por exemplo, você pode usar `
+<meta name="language" content="english">` para indicar o idioma da página da web aos mecanismos de busca.
+
+Conjunto de caracteres
+
+O charset é um campo especial que permite especificar a codificação de caracteres usada na página para que o navegador
+possa exibi-la corretamente. O mais utilizado é o utf-8, e você deve adicioná-lo ao cabeçalho HTML da seguinte forma:
+<meta charset="UTF-8">
+
+HTTP-equiv
+
+Esse campo significa “equivalente HTTP” e é usado para simular cabeçalhos de resposta HTTP. É raro encontrá-lo, e
+recomenda-se usar cabeçalhos HTTP em vez de metatags http-equiv em HTML. Por exemplo, a tag a seguir instruiria o
+navegador a atualizar a página a cada 30 minutos:
+<meta http-equiv="refresh" content="30">
+
+
+Meta-tags básicas (meta-tags para SEO)
+<meta name="description" /> fornece uma breve descrição da página da web
+
+<meta name=”title” /> especifica o título da página da web
+
+<meta name="author" content="name"> especifica o autor da página da web
+
+<meta name="language" content="english"> especifica o idioma da página da web
+
+
+
+<meta name="robots" content="index,follow" /> informa aos mecanismos de busca como rastrear ou indexar uma determinada
+página
+
+Tweaked:
+<meta name="google" content="nositelinkssearchbox" /> informa ao Google para não exibir a caixa de pesquisa de links do
+site para sua página ao mostrar os resultados de pesquisa
+
+<meta name="googlebot" content=”notranslate” /> informa ao Google que você não deseja fornecer uma tradução automática
+para sua página caso o usuário utilize um idioma diferente
+
+<meta name="revised" content="Sunday, July 18th, 2010, 5:15 pm" /> especifica a data e a hora da última modificação em
+que você fez determinadas alterações
+
+<meta name="rating" content="safe for kids"> especifica o público-alvo da sua página
+
+<meta name="copyright" content="Copyright 2022"> especifica os direitos autorais
+
+
+<META http-equiv="..." />
+<meta http-equiv="content-type" content="text/html"> especifica o formato do documento retornado pelo servidor
+
+<meta http-equiv="default-style" /> especifica o formato do documento de estilo
+
+<meta http-equiv="refresh" /> especifica o tempo de validade da página antes que ela seja considerada obsoleta
+
+<meta http-equiv=”Content-language” /> especifica o idioma da página
+
+<meta http-equiv="Cache-Control" content="no-cache"> orienta o navegador sobre como armazenar sua página em cache
+
+Design responsivo/metatags para dispositivos móveis
+<meta name="format-detection" content="telephone=yes" /> indica que os números de telefone devem aparecer como links de
+hipertexto nos quais é possível clicar para fazer uma ligação
+
+<meta name="HandheldFriendly" content="true" /> especifica que a página pode ser visualizada corretamente em
+dispositivos móveis
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /> especifica a área da janela na qual o conteúdo
+da web pode ser visualizado
+
+toda referência em >>>_a4034b7719194c87ad9779f13a1adff2_HTML_Meta_Tags_Printable_Cheat_Sheet.xlsx
